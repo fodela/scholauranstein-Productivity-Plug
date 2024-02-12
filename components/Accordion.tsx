@@ -18,7 +18,7 @@ const Accordion = () => {
           size={20}
         />
       </header>
-      <div className={`${!open && "invisible"} slide-down`}>
+      <div className={`${!open && "invisible"} slide-down overflow-hidden`}>
         <div className={`${!open && "hidden"} slide-down p-4`}>
           No! We only supply in Ghana for now.
         </div>
