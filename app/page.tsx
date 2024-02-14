@@ -3,7 +3,7 @@ import Accordion from "@/components/Accordion";
 import Image, { StaticImageData } from "next/image";
 import standmain from "@/public/images/product/standmain.png";
 import bgtable from "@/public/images/product/bgtable.webp";
-import wallmount from "@/public/images/product/wallmount.png";
+import wallmounthero from "@/public/images/product/wallmounthero.png";
 import laptopdetail from "@/public/images/product/laptopdetail.jpg";
 import { useEffect, useState } from "react";
 import ProductSection from "@/components/Home/ProductSection";
@@ -31,30 +31,29 @@ const heroDetails = [
     title: "Convinient Productivity",
     tagline:
       "Conveniently store and access your phone, cables, or remotes with ease and style.",
-    image: wallmount,
+    image: wallmounthero,
   },
 ];
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
     const interValId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroDetails.length);
-    }, 10000);
+    }, 6000);
     return () => clearInterval(interValId);
   }, []);
   const detail = heroDetails[currentIndex];
   const hero = (
     <section className="bg-secondary/30 py-16">
-      <div className="container grid sm:grid-cols-2 items-center   gap-10 ">
+      <div className="container grid sm:grid-cols-2 items-center   gap-10 overflow-hidden">
         <div className="self-end max-w-sm ">
-          <h1 className="text-lg md:text-xl mb-4 text-primary   uppercase font-semibold moveInLeft ">
-            {detail.title}
-          </h1>
-          <h2>{detail.tagline}</h2>
+          <h1 className="heroTitle">{detail.title}</h1>
+          <h2 className="heroTagline">{detail.tagline}</h2>
         </div>
         <Image
-          className="justify-self-center"
+          className="heroImage"
           src={detail.image}
           width={492.12}
           height={481.67}
@@ -63,6 +62,7 @@ export default function Home() {
       </div>
     </section>
   );
+
   return (
     <main className="mt-28">
       {hero}

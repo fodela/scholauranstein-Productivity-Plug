@@ -34,8 +34,21 @@ section {
   @apply max-w-screen-xl mx-auto;
 }
 
+.heroTitle {
+  @apply text-lg md:text-xl mb-4 text-primary   uppercase font-semibold moveInLeft;
+  animation-delay: 1s;
+}
+
+.heroTagline {
+  @apply moveInLeft;
+  animation-delay: 1.2s;
+}
+
+.heroImage {
+  @apply justify-self-center slide-down;
+}
 .slide-down {
-  animation: slideDown 0.3s ease-in-out;
+  animation: slideDown 1s ease-in-out;
 }
 .menuSlideRight {
   animation: slideRight 0.6s cubic-bezier(0.22, 0.68, 0, 1.71);
@@ -45,7 +58,7 @@ section {
   backface-visibility: hidden;
 }
 .moveInLeft {
-  animation: slideLeft 0.3s ease-out 1s;
+  animation: moveInLeft 1s ease backwards;
 }
 .anti-rotate90 {
   animation: antiRotate90 0.4s ease-in-out;
@@ -57,7 +70,7 @@ section {
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-100vh);
   }
   to {
     opacity: 1;
@@ -78,12 +91,9 @@ section {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(5rem);
+    transform: translateX(100px);
   }
-  80% {
-    opacity: 0.6;
-    transform: translateX(-1rem);
-  }
+
   100% {
     opacity: 1;
     transform: translateX(0);
