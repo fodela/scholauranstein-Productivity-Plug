@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${catamaran.className} font-sans text-grey_main scroll-smooth scroll-mb-24`}
+        className={`${catamaran.className} font-sans text-grey_main scroll-smooth scroll-mb-24 relative`}
       >
         <Header />
         {children}
