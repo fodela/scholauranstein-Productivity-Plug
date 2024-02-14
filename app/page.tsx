@@ -46,7 +46,7 @@ export default function Home() {
   }, []);
   const detail = heroDetails[currentIndex];
   const hero = (
-    <section className="bg-secondary/30 py-16">
+    <section className="bg-secondary/30 py-16" key={currentIndex}>
       <div className="container grid sm:grid-cols-2 items-center   gap-10 overflow-hidden">
         <div className="self-end max-w-sm ">
           <h1 className="heroTitle">{detail.title}</h1>
@@ -64,7 +64,7 @@ export default function Home() {
   );
 
   return (
-    <main className="mt-28">
+    <main className="mt-28 scroll-mt-28">
       {hero}
       <ProductSection />
       <TestimonialSection />

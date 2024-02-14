@@ -34,7 +34,7 @@ const products = [
 ];
 const ProductSection = () => {
   return (
-    <section className="px-8 max-w-screen-xl mx-auto my-16">
+    <section id="products" className="px-8 max-w-screen-xl mx-auto my-16">
       <h2 className="font-bold text-xl mb-8 text-primary">Our Products</h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center ">
         {products.map((product) => (

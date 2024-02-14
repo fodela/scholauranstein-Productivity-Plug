@@ -22,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${catamaran.className} font-sans text-grey_main`}>
+      <body
+        className={`${catamaran.className} font-sans text-grey_main scroll-smooth scroll-mb-24`}
+      >
         <Header />
         {children}
         <footer className="flex flex-col gap-4 divide-y  bg-[#21211D] p-10 ">

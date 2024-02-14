@@ -7,7 +7,7 @@ import { IoIosMenu, IoMdClose } from "react-icons/io";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed top-0 right-0 left-0 ">
+    <div className="fixed top-0 right-0 left-0 z-50 ">
       <header className=" container px-4 flex justify-between items-center py-8 relative bg-white">
         <Image
           src="images/logo.svg"
@@ -18,17 +18,17 @@ const Header = () => {
         />
         <div className="md:flex gap-6 items-center hidden ">
           <ul className="flex gap-6 mx-6">
-            <Link href="/">
+            <Link href="">
               <li className=" hover:text-primary transition-all ease-linear">
                 Home
               </li>
             </Link>
-            <Link href="/">
+            <Link href="#products">
               <li className=" hover:text-primary transition-all ease-linear">
                 Product
               </li>
             </Link>
-            <Link href="/">
+            <Link href="#testimonials">
               <li className=" hover:text-primary transition-all ease-linear">
                 Testimonials
               </li>
