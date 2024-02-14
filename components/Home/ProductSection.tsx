@@ -10,7 +10,7 @@ const products = [
   {
     id: 1,
     name: "Foldable bed table with USB, fan and light",
-    price: "150",
+    price: "160",
     image: "bgtable.webp",
   },
   {
@@ -28,13 +28,16 @@ const products = [
   {
     id: 4,
     name: "Multipurpose wall mount accessory holder",
-    price: "30",
+    price: "25",
     image: "bgwallmount.png",
   },
 ];
 const ProductSection = () => {
   return (
-    <section id="products" className="px-8 max-w-screen-xl mx-auto my-16">
+    <section
+      id="products"
+      className="px-8 max-w-screen-xl mx-auto my-16 scroll-mt-28"
+    >
       <h2 className="font-bold text-xl mb-8 text-primary">Our Products</h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center ">
         {products.map((product) => (

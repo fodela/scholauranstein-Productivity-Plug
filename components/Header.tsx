@@ -7,8 +7,8 @@ import { IoIosMenu, IoMdClose } from "react-icons/io";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed top-0 right-0 left-0 z-50 ">
-      <header className=" container px-4 flex justify-between items-center py-8 relative bg-white">
+    <div className="fixed top-0 right-0 left-0 z-50 bg-white">
+      <header className=" container px-4 flex justify-between items-center py-8 relative ">
         <Image
           src="images/logo.svg"
           alt="comforTable logo"
@@ -18,26 +18,26 @@ const Header = () => {
         />
         <div className="md:flex gap-6 items-center hidden ">
           <ul className="flex gap-6 mx-6">
-            <Link href="">
+            <a href="">
               <li className=" hover:text-primary transition-all ease-linear">
                 Home
               </li>
-            </Link>
-            <Link href="#products">
+            </a>
+            <a href="#products">
               <li className=" hover:text-primary transition-all ease-linear">
                 Product
               </li>
-            </Link>
-            <Link href="#testimonials">
+            </a>
+            <a href="#testimonials">
               <li className=" hover:text-primary transition-all ease-linear">
                 Testimonials
               </li>
-            </Link>
-            {/* <Link href="/contact">
+            </a>
+            {/* <a href="/contact">
               <li className=" hover:text-primary transition-all ease-linear">
                 Contact
               </li>
-            </Link> */}
+            </a> */}
           </ul>
 
           <button className="px-4 py-2 bg-primary text-white  rounded-lg">
@@ -62,12 +62,21 @@ const Header = () => {
         )}
         {open && (
           <ul className=" w-2/3 absolute flex flex-col top-10 -left-5 backdrop-blur-sm bg-[#21211dbf] text-white text-3xl gap-6 p-10 menuSlideRight transition-transform text-center">
-            <li className="hover:text-black hover:bg-white transition-all  ">
-              Home
-            </li>
-            <li>Product</li>
-            <li>Testimonials</li>
-            <li>Contact</li>
+            <a href="" onClick={() => setOpen(false)}>
+              <li className=" hover:text-primary hover:bg-white transition-all ease-linear">
+                Home
+              </li>
+            </a>
+            <a href="#products" onClick={() => setOpen(false)}>
+              <li className=" hover:text-primary hover:bg-white transition-all ease-linear">
+                Product
+              </li>
+            </a>
+            <a href="#testimonials" onClick={() => setOpen(false)}>
+              <li className=" hover:text-primary hover:bg-white transition-all ease-linear">
+                Testimonials
+              </li>
+            </a>
           </ul>
         )}
       </header>

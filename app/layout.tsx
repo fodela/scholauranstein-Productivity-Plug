@@ -21,10 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${catamaran.className} font-sans text-grey_main scroll-smooth scroll-mb-24 relative`}
-      >
+    <html lang="en" className="scroll-smooth">
+      <body className={`${catamaran.className} font-sans text-grey_main`}>
         <Header />
         {children}
         <footer className="flex flex-col gap-4 divide-y  bg-[#21211D] p-10 ">

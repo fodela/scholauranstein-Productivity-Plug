@@ -4,7 +4,6 @@ import Image, { StaticImageData } from "next/image";
 import standmain from "@/public/images/product/standmain.png";
 import bgtable from "@/public/images/product/bgtable.webp";
 import wallmounthero from "@/public/images/product/wallmounthero.png";
-import laptopdetail from "@/public/images/product/laptopdetail.jpg";
 import { useEffect, useState } from "react";
 import ProductSection from "@/components/Home/ProductSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
@@ -28,7 +27,7 @@ const heroDetails = [
     image: standmain,
   },
   {
-    title: "Convinient Productivity",
+    title: "Convenient Productivity",
     tagline:
       "Conveniently store and access your phone, cables, or remotes with ease and style.",
     image: wallmounthero,
