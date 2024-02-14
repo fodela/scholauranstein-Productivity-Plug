@@ -42,6 +42,10 @@ section {
 }
 .slideLeft {
   animation: slideLeft 0.3s ease-out 1s;
+  backface-visibility: hidden;
+}
+.moveInLeft {
+  animation: slideLeft 0.3s ease-out 1s;
 }
 .anti-rotate90 {
   animation: antiRotate90 0.4s ease-in-out;
@@ -67,6 +71,20 @@ section {
     transform: translateX(100%);
   }
   to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  80% {
+    opacity: 0.6;
+    transform: translateX(-1rem);
+  }
+  100% {
     opacity: 1;
     transform: translateX(0);
   }

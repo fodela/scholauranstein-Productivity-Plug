@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
 
@@ -9,21 +10,37 @@ const Header = () => {
     <div className="fixed top-0 right-0 left-0 ">
       <header className=" container px-4 flex justify-between items-center py-8 relative bg-white">
         <Image
-          src="images/ComforTablelogo.svg"
+          src="images/logo.svg"
           alt="comforTable logo"
           width={204.67}
           height={44.46}
-          className="dark:invert"
+          className=""
         />
         <div className="md:flex gap-6 items-center hidden ">
-          <ul className="flex gap-6">
-            <li>Home</li>
-            <li>Product</li>
-            <li>Testimonials</li>
-            <li>Contact</li>
+          <ul className="flex gap-6 mx-6">
+            <Link href="/">
+              <li className=" hover:text-primary transition-all ease-linear">
+                Home
+              </li>
+            </Link>
+            <Link href="/">
+              <li className=" hover:text-primary transition-all ease-linear">
+                Product
+              </li>
+            </Link>
+            <Link href="/">
+              <li className=" hover:text-primary transition-all ease-linear">
+                Testimonials
+              </li>
+            </Link>
+            {/* <Link href="/contact">
+              <li className=" hover:text-primary transition-all ease-linear">
+                Contact
+              </li>
+            </Link> */}
           </ul>
 
-          <button className="px-4 py-2 bg-[#21211D] text-white dark:bg-white dark:text-[#21211D]  rounded-lg">
+          <button className="px-4 py-2 bg-primary text-white  rounded-lg">
             Order Now
           </button>
         </div>

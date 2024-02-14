@@ -29,7 +29,7 @@ export default function RootLayout({
           <div className="flex flex-wrap justify-between items-center gap-4 ">
             <div className="">
               <Image
-                src="/images/ComforTablelogo.svg"
+                src="/images/logo.svg"
                 alt="comforTable logo"
                 width={204.67}
                 height={44.46}
@@ -46,7 +46,7 @@ export default function RootLayout({
           </div>
           <div className="sm:flex justify-between text-xs py-2">
             <p>designed by KalaIT</p>
-            <p>© Copyright 2025 - Scholaurenstein's Productivity Plug</p>
+            <p>&copy; Copyright 2025 - Scholaurenstein Productivity Plug</p>
           </div>
         </footer>
       </body>
