@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { FaQuoteLeft } from "react-icons/fa";
+
 const testimonies = [
   {
     name: "Delali Dogbevi",
@@ -25,17 +28,49 @@ const testimonies = [
   },
 ];
 const TestimonialSection = () => {
+  const [testimonyIndex, setTestimonyIndex] = useState(0);
+  let testimony = testimonies[testimonyIndex];
+  useEffect(() => {
+    const switchTestimonialInterval = setInterval(
+      () => setTestimonyIndex((testimonyIndex + 1) % testimonies.length),
+      5000
+    );
+    return () => clearInterval(switchTestimonialInterval);
+  });
   return (
-    <section id="testimonials" className="py-16 scroll-smooth scroll-mt-24">
-      <div className="text-center text-primary max-w-xl  mx-auto">
-        <p>
-          {testimonies[2].title} {testimonies[2].name}
+    <section
+      id="testimonials"
+      className="py-16 scroll-smooth scroll-mt-24 flex flex-col items-center"
+      key={testimonyIndex}
+    >
+      <header className="items-center gap-4">
+        <FaQuoteLeft size={25} />
+        <h2 className="capitalize text-center text-2xl text-primary mb-10">
+          What our customers are saying
+        </h2>
+      </header>
+      <div className="text-center text-primary max-w-xl animateCarousel ">
+        <p className="text-grey_main">
+          {testimony.title} {testimony.name}
         </p>
-        <p className="text-xl mb-4"> {testimonies[2].content}</p>
-        <p>
-          {testimonies[2].position},{" "}
-          <span className="text-grey_main">{testimonies[2].institution}</span>
+        <p className="text-xl mb-4 mt-3 h-60 md:h-36 flex items-center">
+          {" "}
+          {testimony.content}
         </p>
+        <p>
+          {testimony.position},{" "}
+          <span className="text-grey_main">{testimony.institution}</span>
+        </p>
+      </div>
+      <div className="flex gap-2  mt-8">
+        {testimonies.map((_, index) => (
+          <div
+            key={index}
+            className={`${
+              testimonyIndex === index && "scaleCarousel"
+            } h-3 w-3 rounded-full bg-primary transition-all`}
+          />
+        ))}
       </div>
     </section>
   );
