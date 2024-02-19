@@ -45,8 +45,8 @@ export default function Home() {
   }, []);
   const detail = heroDetails[currentIndex];
   const hero = (
-    <section className="bg-secondary/30 py-16" key={currentIndex}>
-      <div className="container grid sm:grid-cols-2 items-center   gap-10 overflow-hidden">
+    <section className="relative" key={currentIndex}>
+      <div className="container grid sm:grid-cols-2 items-center gap-10 overflow-hidden max-w-screen-md bg-secondary/30 py-16 lg:py-32 px-4 lg:px-32 ">
         <div className="self-end max-w-sm ">
           <h1 className="heroTitle">{detail.title}</h1>
           <h2 className="heroTagline">{detail.tagline}</h2>
@@ -58,6 +58,19 @@ export default function Home() {
           height={481.67}
           alt="4 image of people using the foldable bed table at different events"
         />
+        <div className="flex flex-col gap-2  mt-8 absolute left-5">
+          {heroDetails.map((_, index) => (
+            <div className="flex gap-1 items-center bg-opacity-100">
+              {index}
+              <div
+                key={index}
+                className={`${
+                  currentIndex === index && "animateSwitchHero"
+                } h-1 w-6 rounded-full bg-grey_main transition-all -z-10`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
