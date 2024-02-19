@@ -60,6 +60,22 @@ section {
 .moveInLeft {
   animation: moveInLeft 1s ease backwards;
 }
+.moveOutLeft {
+  animation: moveOutLeft 0.3s ease forwards;
+}
+.moveInRight {
+  animation: moveInRight 0.3s 0.3s ease backwards;
+}
+.animateCarousel {
+  animation: moveCarousel 6s ease forwards;
+}
+.animateHeroSwitch {
+  animation: switchHero 3s ease forwards;
+  @apply text-primary;
+}
+.scaleCarousel {
+  animation: growCarousel 6s ease forwards;
+}
 .anti-rotate90 {
   animation: antiRotate90 0.4s ease-in-out;
 }
@@ -99,6 +115,85 @@ section {
     transform: translateX(0);
   }
 }
+@keyframes moveOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+    display: none;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveCarousel {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes growCarousel {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.5);
+  }
+  85% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes switchHero {
+  0% {
+    width: 1%;
+    z-index: -1;
+  }
+  15% {
+    width: 100%;
+    z-index: 0;
+  }
+  85% {
+    width: 100%;
+    z-index: 0;
+  }
+  100% {
+    width: 1%;
+    z-index: -1;
+  }
+}
+
 @keyframes slideRight {
   from {
     opacity: 0;
