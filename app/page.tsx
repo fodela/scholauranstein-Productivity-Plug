@@ -1,9 +1,6 @@
 "use client";
 import Accordion from "@/components/Accordion";
 import Image, { StaticImageData } from "next/image";
-import standmain from "@/public/images/product/standmain.png";
-import bgtable from "@/public/images/product/bgtable.png";
-import wallmounthero from "@/public/images/product/wallmounthero.png";
 import { useEffect, useState } from "react";
 import ProductSection from "@/components/Home/ProductSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
@@ -18,19 +15,19 @@ const heroDetails = [
     title: "Comfortable Productivity",
     tagline:
       "You shouldn't have to choose between productivity and comfort. You can have it all",
-    image: bgtable,
+    image: "/images/product/bgtable.png",
   },
   {
     title: "Healthy Productivity",
     tagline:
       "Keeps your laptop healthy by improving it cooling and keeps you healthy by improving your posture",
-    image: standmain,
+    image: "/images/product/standmain.png",
   },
   {
     title: "Convenient Productivity",
     tagline:
       "Conveniently store and access your phone, cables, or remotes with ease and style.",
-    image: wallmounthero,
+    image: "/images/product/wallmounthero.png",
   },
 ];
 
@@ -48,7 +45,7 @@ export default function Home() {
     <section className="" key={currentIndex}>
       <div className="relative w-fit mx-auto">
         {" "}
-        <div className="flex flex-col gap-2  mt-8 absolute -left-5 top-1/2 -translate-y-1/2 z-10">
+        <div className="flex flex-col gap-2  mt-8 absolute -left-5 top-1/2 sm:top-1/3 -translate-y-1/2 z-10">
           {heroDetails.map((_, index) => (
             <div
               key={index}

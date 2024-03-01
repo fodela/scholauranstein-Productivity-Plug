@@ -13,7 +13,7 @@ const products = [
     id: 1,
     name: "Foldable bed table with USB, fan and light",
     price: "160",
-    image: "bgtable.webp",
+    image: "bgtable.png",
   },
   {
     id: 2,
