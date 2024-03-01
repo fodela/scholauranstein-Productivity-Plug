@@ -35,20 +35,23 @@ section {
 }
 
 .heroTitle {
-  @apply text-lg md:text-xl mb-4 text-primary   uppercase font-semibold moveInLeft;
+  @apply text-lg md:text-xl mb-4 text-primary   uppercase font-semibold moveCarouselInLeft;
   animation-delay: 1s;
 }
 
 .heroTagline {
-  @apply moveInLeft;
+  @apply moveCarouselInLeft;
   animation-delay: 1.2s;
 }
 
 .heroImage {
-  @apply justify-self-center slide-down;
+  @apply justify-self-center moveInCarouselDown;
 }
 .slide-down {
   animation: slideDown 1s ease-in-out;
+}
+.moveInCarouselDown {
+  animation: moveInCarouselDown 6s ease-in-out;
 }
 .menuSlideRight {
   animation: slideRight 0.6s cubic-bezier(0.22, 0.68, 0, 1.71);
@@ -60,22 +63,28 @@ section {
 .moveInLeft {
   animation: moveInLeft 1s ease backwards;
 }
+.moveCarouselInLeft {
+  animation: moveCarouselInLeft 5s ease backwards;
+}
 .moveOutLeft {
   animation: moveOutLeft 0.3s ease forwards;
 }
 .moveInRight {
   animation: moveInRight 0.3s 0.3s ease backwards;
 }
+.moveCarouselInRight {
+  animation: moveCarouselInRight 3.5s 0.3s ease backwards;
+}
 .animateCarousel {
   animation: moveCarousel 6s ease forwards;
 }
 .animateHeroSwitch {
-  animation: switchHero 3s ease forwards;
-  @apply text-primary;
+  animation: switchHero 6s ease-in-out forwards;
 }
 .scaleCarousel {
   animation: growCarousel 6s ease forwards;
 }
+
 .anti-rotate90 {
   animation: antiRotate90 0.4s ease-in-out;
 }
@@ -91,6 +100,24 @@ section {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes moveInCarouselDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
   }
 }
 
@@ -115,6 +142,26 @@ section {
     transform: translateX(0);
   }
 }
+@keyframes moveCarouselInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
 @keyframes moveOutLeft {
   0% {
     opacity: 1;
@@ -137,6 +184,26 @@ section {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes moveCarouselInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(100px);
   }
 }
 
@@ -177,23 +244,19 @@ section {
 }
 @keyframes switchHero {
   0% {
-    width: 1%;
-    z-index: -1;
+    width: 8px;
   }
   15% {
-    width: 100%;
-    z-index: 0;
+    width: 100px;
   }
+
   85% {
-    width: 100%;
-    z-index: 0;
+    width: 100px;
   }
   100% {
-    width: 1%;
-    z-index: -1;
+    width: 8px;
   }
 }
-
 @keyframes slideRight {
   from {
     opacity: 0;
