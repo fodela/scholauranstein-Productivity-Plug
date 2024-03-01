@@ -51,6 +51,7 @@ export default function Home() {
         <div className="flex flex-col gap-2  mt-8 absolute -left-5 top-1/2 -translate-y-1/2 z-10">
           {heroDetails.map((_, index) => (
             <div
+              key={index}
               className={`flex gap-1 items-center bg-opacity-100 ${
                 currentIndex === index && "text-primary"
               }`}
