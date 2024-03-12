@@ -53,7 +53,7 @@ const TestimonialSection = () => {
         <p className="text-grey_main">
           {testimony.title} {testimony.name}
         </p>
-        <p className="text-xl mb-4 mt-3 h-60 md:h-36 flex items-center">
+        <p className="text-lg sm:text-xl mb-4 mt-3 h-64 md:h-36 flex items-center">
           {" "}
           {testimony.content}
         </p>
