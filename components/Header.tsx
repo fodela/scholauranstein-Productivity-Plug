@@ -18,7 +18,7 @@ const Header = () => {
         />
         <div className="md:flex gap-6 items-center hidden ">
           <ul className="flex gap-6 mx-6">
-            <a href="">
+            <a href="#hero">
               <li className=" hover:text-primary transition-all ease-linear">
                 Home
               </li>
