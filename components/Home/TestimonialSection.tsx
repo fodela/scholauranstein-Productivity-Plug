@@ -64,11 +64,12 @@ const TestimonialSection = () => {
       </div>
       <div className="flex gap-2  mt-8">
         {testimonies.map((_, index) => (
-          <div
+          <button
             key={index}
             className={`${
               testimonyIndex === index && "scaleCarousel"
             } h-3 w-3 rounded-full bg-primary transition-all`}
+            onClick={() => setTestimonyIndex(index)}
           />
         ))}
       </div>
