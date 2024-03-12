@@ -40,7 +40,7 @@ const TestimonialSection = () => {
   return (
     <section
       id="testimonials"
-      className="py-16 scroll-smooth scroll-mt-24 flex flex-col items-center"
+      className="py-16 scroll-smooth scroll-mt-24 flex flex-col items-center w-full overflow-hidden"
       key={testimonyIndex}
     >
       <header className="items-center gap-4">
