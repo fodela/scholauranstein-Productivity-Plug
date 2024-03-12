@@ -1,9 +1,14 @@
 "use client";
-import Accordion from "@/components/Accordion";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import ProductSection from "@/components/Home/ProductSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export type HeroDetail = {
   title: string;
@@ -87,7 +92,7 @@ export default function Home() {
       {hero}
       <ProductSection />
       <TestimonialSection />
-      <section className="bg-[#21211D]   py-16 ">
+      <section className="bg-primary   py-16 ">
         <div className="container grid sm:grid-cols-3 gap-5 sm:gap-20">
           <div className="col-span-2  mb-5">
             <h2 className="text-2xl max-w-lg py-4 text-white">
@@ -101,19 +106,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" container">
+      <section className="container">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-primary mb-2">
             Any Questions? Look Here
           </h2>
           <p>Frequently asked questions</p>
         </div>
-        <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
-          <Accordion />
-          <Accordion />
-          <Accordion />
-          <Accordion />
-          <Accordion />
+        <div className="">
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full grid md:grid-cols-2 gap-4 lg:gap-6 text-primary"
+          >
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                Do you make deliveries outside Ghana?
+              </AccordionTrigger>
+              <AccordionContent>
+                No, we only deliver within Ghana at the moment.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Is it styled?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It comes with default styles that matches the other
+                components&apos; aesthetic.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Is it animated?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It&apos;s animated by default, but you can disable it if
+                you prefer.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
     </main>
