@@ -47,16 +47,16 @@ export default function Home() {
   }, []);
   const detail = heroDetails[currentIndex];
   const hero = (
-    <section className="" key={currentIndex}>
+    <section id="hero" className="scroll-mt-28" key={currentIndex}>
       <div className="relative w-fit mx-auto">
-        {" "}
-        <div className="flex flex-col gap-2  mt-8 absolute -left-5 top-1/2 sm:top-1/3 -translate-y-1/2 z-10">
+        <div className="hidden md:flex flex-col gap-2  mt-8 absolute -left-5 top-1/2 sm:top-1/3 -translate-y-1/2 z-10">
           {heroDetails.map((_, index) => (
-            <div
+            <button
               key={index}
-              className={`flex gap-1 items-center bg-opacity-100 ${
+              className={`flex gap-1 items-center bg-opacity-100 hover:text-primary transition-colors ease-linear ${
                 currentIndex === index && "text-primary"
               }`}
+              onClick={() => setCurrentIndex(index)}
             >
               {index}
               <div
@@ -67,7 +67,7 @@ export default function Home() {
                     : "bg-grey_main"
                 } h-1 w-2  rounded-full  transition-all `}
               />
-            </div>
+            </button>
           ))}
         </div>
         <div className="relative container grid  sm:grid-cols-2 items-center gap-10  max-w-screen-md overflow-hidden bg-secondary/30 py-16 lg:py-32 px-4 lg:px-32 ">
@@ -81,6 +81,18 @@ export default function Home() {
           <div className="self-end max-w-sm sm:order-first ">
             <h1 className="heroTitle">{detail.title}</h1>
             <h2 className="heroTagline">{detail.tagline}</h2>
+          </div>
+
+          <div className="flex gap-2  mt-8 md:hidden sm:col-span-2 justify-self-center ">
+            {heroDetails.map((_, index) => (
+              <button
+                key={index}
+                className={`${
+                  currentIndex === index && "scaleCarousel"
+                } h-3 w-3 rounded-full bg-primary transition-all`}
+                onClick={() => setCurrentIndex(index)}
+              />
+            ))}
           </div>
         </div>
       </div>
