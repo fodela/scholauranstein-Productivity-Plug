@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${catamaran.className} font-sans text-grey_main`}>
         <Header />
         {children}
-        <footer className="flex flex-col gap-4 divide-y  bg-[#21211D] p-10 ">
+        <footer className="flex flex-col gap-4 divide-y  bg-primary p-10 ">
           <div className="flex flex-wrap justify-between items-center gap-4 ">
             <div className="">
               <Image
