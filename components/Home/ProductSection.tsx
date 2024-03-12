@@ -24,7 +24,7 @@ const products = [
   {
     id: 3,
     name: "Laptop stand",
-    price: "120",
+    price: "150",
     image: "laptopstanddetail.png",
   },
   {
