@@ -44,7 +44,7 @@ const TestimonialSection = () => {
       key={testimonyIndex}
     >
       <header className="items-center gap-4">
-        <FaQuoteLeft size={25} />
+        {/* <FaQuoteLeft size={25} /> */}
         <h2 className="capitalize text-center text-2xl text-primary mb-10">
           What our customers are saying
         </h2>
