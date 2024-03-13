@@ -3,12 +3,9 @@ import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import ProductSection from "@/components/Home/ProductSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import CTA from "@/components/Home/CTA";
+import FAQ from "@/components/Home/FAQ";
+import ProductDetail from "@/components/Home/ProductDetail";
 
 export type HeroDetail = {
   title: string;
@@ -100,62 +97,13 @@ export default function Home() {
   );
 
   return (
-    <main className="mt-28 scroll-mt-28">
+    <main className="mt-28 scroll-mt-28 relative">
       {hero}
       <ProductSection />
       <TestimonialSection />
-      <section className="bg-primary   py-16 ">
-        <div className="container grid sm:grid-cols-3 gap-5 sm:gap-20">
-          <div className="col-span-2  mb-5">
-            <h2 className="text-2xl max-w-lg py-4 text-white">
-              You should not have to choose between comfort and productivity.
-            </h2>
-            <p className="">You can have it all</p>
-          </div>
-          <button className=" px-6 py-2 text-lg bg-white text-black rounded-lg justify-self-center self-end">
-            Order now
-          </button>
-        </div>
-      </section>
-
-      <section className="container">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-primary mb-2">
-            Any Questions? Look Here
-          </h2>
-          <p>Frequently asked questions</p>
-        </div>
-        <div className="">
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full grid md:grid-cols-2 gap-4 lg:gap-6 text-primary"
-          >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                Do you make deliveries outside Ghana?
-              </AccordionTrigger>
-              <AccordionContent>
-                No, we only deliver within Ghana at the moment.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Is it styled?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It comes with default styles that matches the other
-                components&apos; aesthetic.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Is it animated?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It&apos;s animated by default, but you can disable it if
-                you prefer.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
+      <CTA />
+      <FAQ />
+      <ProductDetail />
     </main>
   );
 }
