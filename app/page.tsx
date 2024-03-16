@@ -5,7 +5,6 @@ import ProductSection from "@/components/Home/ProductSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
 import CTA from "@/components/Home/CTA";
 import FAQ from "@/components/Home/FAQ";
-import ProductDetail from "@/components/Home/ProductDetail";
 
 export type HeroDetail = {
   title: string;
@@ -103,7 +102,8 @@ export default function Home() {
       <TestimonialSection />
       <CTA />
       <FAQ />
-      <ProductDetail />
     </main>
   );
 }
+
+const product = {};

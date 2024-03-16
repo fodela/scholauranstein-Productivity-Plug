@@ -6,10 +6,10 @@ import {
 } from "@/components/ui/accordion";
 const FAQ = () => {
   return (
-    <section className="container">
+    <section className="container  md:px-16">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-primary mb-2">
-          Any Questions? Look Here
+          Any Question? Look Here
         </h2>
         <p>Frequently asked questions</p>
       </div>
@@ -17,7 +17,7 @@ const FAQ = () => {
         <Accordion
           type="single"
           collapsible
-          className="w-full grid md:grid-cols-2 gap-4 lg:gap-6 text-primary"
+          className="w-full grid max-w-screen-lg mx-auto gap-4 lg:gap-6 text-primary"
         >
           <AccordionItem value="item-1">
             <AccordionTrigger>

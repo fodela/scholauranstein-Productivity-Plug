@@ -52,7 +52,7 @@ export default function RootLayout({
           </div>
           <div className="sm:flex justify-between text-xs py-2">
             <p>designed by KalaIT</p>
-            <p>&copy; Copyright 2025 - Scholaurenstein Productivity Plug</p>
+            <p>&copy; Copyright 2025 - Scholauranstein Productivity Plug</p>
           </div>
         </footer>
       </body>

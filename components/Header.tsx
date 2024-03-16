@@ -7,7 +7,7 @@ import { IoIosMenu, IoMdClose } from "react-icons/io";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed top-0 right-0 left-0 z-50 bg-white">
+    <div className="fixed top-0 right-0 left-0 z-30 bg-white">
       <header className=" container px-4 flex justify-between items-center py-8 relative ">
         <Image
           src="images/logo.svg"
