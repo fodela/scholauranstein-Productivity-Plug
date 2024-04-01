@@ -2,19 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/button";
 
-const ProductDetail = ({
-  product,
-}: {
-  product: {
-    id: number;
-    name: string;
-    description: string;
-    price: string;
-    availableColors: { name: string; color: string }[];
-    image: string;
-    isFavorite: boolean;
-  };
-}) => {
+const ProductDetail = ({ product }: { product: any }) => {
   const [colorIndex, setColorIndex] = useState(0);
   return (
     <div className="px-8 py-16 h-full flex justify-center  items-center">
@@ -39,9 +27,9 @@ const ProductDetail = ({
               <h5 className="font-bold text-lg mt-2">Choose color</h5>
               <p>{product.availableColors[colorIndex].name}</p>
               <div className="flex gap-4 flex-wrap py-4">
-                {product.availableColors.map((color, index) => (
+                {product.availableColors.map((color: any, index: number) => (
                   <div
-                  key={index}
+                    key={index}
                     className={`h-8 w-8 rounded ${
                       product.availableColors[index].color
                     } ${
