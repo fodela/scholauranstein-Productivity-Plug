@@ -41,6 +41,7 @@ const ProductDetail = ({
               <div className="flex gap-4 flex-wrap py-4">
                 {product.availableColors.map((color, index) => (
                   <div
+                  key={index}
                     className={`h-8 w-8 rounded ${
                       product.availableColors[index].color
                     } ${
