@@ -64,7 +64,7 @@ import {
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default function Dashboard() {
+export default function Products() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
