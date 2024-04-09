@@ -43,7 +43,7 @@ import {
 export default function Customers() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
-      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14 lg:pl-0">
         <header className=" flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
           <h2 className="capitalize font-bold dark:text-white w-full">
             Customers

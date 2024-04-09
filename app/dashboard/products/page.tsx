@@ -67,7 +67,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function Products() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
-      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14 lg:pl-0">
         <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
@@ -161,7 +161,7 @@ export default function Products() {
                   <AvatarImage
                     src="/images/laura-avatar.jpg"
                     alt="avatar"
-                    className=""
+                    className="object-cover object-top"
                   />
                   <AvatarFallback>LSB</AvatarFallback>
                 </Avatar>
