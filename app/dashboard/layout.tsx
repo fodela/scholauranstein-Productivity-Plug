@@ -26,6 +26,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 export const metadata = {
   title: "Scholauranstein Productivity Plug | Home",
@@ -39,12 +40,20 @@ export default function RootLayout({
 }) {
   return (
     <div className="bg-[#e4e4e7] dark:bg-[#01080a] grid min-h-screen w-full  lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-muted/40 lg:block">
+      <div className="hidden border-r border-grey_accent bg-muted/40 lg:block">
         <aside className="flex h-full max-h-screen flex-col gap-2">
-          <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
+          <div className="flex h-14 items-center border-b border-grey_accent px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Package2 className="h-6 w-6" />
-              <span className="">Acme Inc</span>
+              <Image
+                src="/relax.svg"
+                alt="logo"
+                height={20}
+                width={35}
+                className="dark:invert"
+              />{" "}
+              <span className="text-black dark:text-white">
+                Scholauranstein
+              </span>
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
               <Bell className="h-4 w-4" />
@@ -111,14 +120,14 @@ export default function RootLayout({
           </div>
         </aside>
       </div>
-      <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:block lg:hidden">
+      <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r border-grey_accent bg-background sm:block lg:hidden">
         <nav className="flex flex-col items-center gap-4 px-2 py-4">
           <Link
             href="#"
             className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
           >
             <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
-            <span className="sr-only">Acme Inc</span>
+            <span className="sr-only">Scholauranstein</span>
           </Link>
           <TooltipProvider>
             <Tooltip>
