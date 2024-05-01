@@ -39,6 +39,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Image from "next/image";
 
 export default function Customers() {
   return (
@@ -62,11 +63,17 @@ export default function Customers() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
-                  variant="secondary"
+                  variant="outline"
                   size="icon"
-                  className="rounded-full"
+                  className="overflow-hidden rounded-full"
                 >
-                  <CircleUser className="h-5 w-5" />
+                  <Image
+                    src="/images/laura.jpg"
+                    width={36}
+                    height={36}
+                    alt="Avatar"
+                    className="overflow-hidden object-cover object-top"
+                  />
                   <span className="sr-only">Toggle user menu</span>
                 </Button>
               </DropdownMenuTrigger>
