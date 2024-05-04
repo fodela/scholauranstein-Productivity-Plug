@@ -12,7 +12,7 @@ const montserrat = Montserrat({
   display: "swap",
   variable: "--font-montserrat",
 });
-const products = [
+export const products = [
   {
     id: 1,
     name: "Foldable bed table with USB, fan and light",
