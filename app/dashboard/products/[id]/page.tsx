@@ -456,7 +456,7 @@ export default function EditProduct() {
                         width="300"
                       />
                       <div className="grid grid-cols-3 gap-2">
-                        <button>
+                        <div>
                           <Image
                             alt="Product image"
                             className="aspect-square w-full rounded-md object-cover"
@@ -464,8 +464,8 @@ export default function EditProduct() {
                             src="/placeholder.svg"
                             width="84"
                           />
-                        </button>
-                        <button>
+                        </div>
+                        <div>
                           <Image
                             alt="Product image"
                             className="aspect-square w-full rounded-md object-cover"
@@ -473,11 +473,11 @@ export default function EditProduct() {
                             src="/placeholder.svg"
                             width="84"
                           />
-                        </button>
-                        <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
+                        </div>
+                        <div className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
                           <Upload className="h-4 w-4 text-muted-foreground" />
                           <span className="sr-only">Upload</span>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </CardContent>

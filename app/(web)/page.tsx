@@ -5,6 +5,7 @@ import ProductSection from "@/components/Home/ProductSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
 import CTA from "@/components/Home/CTA";
 import FAQ from "@/components/Home/FAQ";
+import CartIcon from "@/components/Cart/CartIcon";
 
 export type HeroDetail = {
   title: string;
@@ -41,6 +42,7 @@ export default function Home() {
     }, 6000);
     return () => clearInterval(interValId);
   }, []);
+
   const detail = heroDetails[currentIndex];
   const hero = (
     <section id="hero" className="scroll-mt-28" key={currentIndex}>
@@ -102,6 +104,7 @@ export default function Home() {
       <TestimonialSection />
       <CTA />
       <FAQ />
+      <CartIcon />
     </main>
   );
 }

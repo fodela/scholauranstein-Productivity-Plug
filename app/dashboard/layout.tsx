@@ -64,14 +64,14 @@ export default function RootLayout({
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
                 href="/dashboard"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground dark:text-white transition-all hover:text-primary"
               >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Link>
               <Link
                 href="/dashboard/orders"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground dark:text-white transition-all hover:text-primary"
               >
                 <ShoppingCart className="h-4 w-4" />
                 Orders
@@ -88,36 +88,20 @@ export default function RootLayout({
               </Link>
               <Link
                 href="/dashboard/customers"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground dark:text-white transition-all hover:text-primary"
               >
                 <Users className="h-4 w-4" />
                 Customers
               </Link>
               <Link
                 href="/analytics"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground dark:text-white transition-all hover:text-primary"
               >
                 <LineChart className="h-4 w-4" />
                 Analytics
               </Link>
             </nav>
           </nav>
-          <div className="mt-auto p-4">
-            <Card>
-              <CardHeader className="p-2 pt-0 md:p-4">
-                <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>
-                  Unlock all features and get unlimited access to our support
-                  team.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
-                <Button size="sm" className="w-full">
-                  Upgrade
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
         </aside>
       </div>
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r border-grey_accent bg-background sm:block lg:hidden">
@@ -126,7 +110,14 @@ export default function RootLayout({
             href="#"
             className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
           >
-            <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
+            <Image
+              src="/relax.svg"
+              width={24}
+              height={24}
+              alt="logo icon"
+              className="dark:invert"
+            />
+
             <span className="sr-only">Scholauranstein</span>
           </Link>
           <TooltipProvider>

@@ -1,3 +1,3 @@
-export {handlers} from "@/auth";
+export { handlers } from "@/auth";
 
-const {GET, POST} = handlers
+const { GET, POST } = handlers;
